@@ -7,9 +7,9 @@ if (! empty($_POST["username"])) {
     $statement->execute();
     $result = $statement->get_result();
     if ($result->num_rows > 0) {
-        echo "<span id='phppot-message' class='error'>Username is not available.</span>";
+        echo "Логин занят";
     } else {
-        echo "<span id='phppot-message' class='success'>Username is available.</span>";
+        echo "Логин свободен";
     }
 }
 ?>
